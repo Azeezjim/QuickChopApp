@@ -3,13 +3,14 @@ import { AuthStack } from './src/navigation/authStack';
 import RestaurantHomeScreen from './src/screens/RestaurantHomeScreen';
 import HomeScreen from './src/screens/HomeScreen';
 import RootNavigator from './src/navigation/rootNavigation';
+import  {SignInContextProvider}  from './src/contexts/authContext'
 import MyOrdersScreen from './src/screens/MyOrdersScreen';
 import { AppStack } from './src/navigation/appStack';
 
 
 export default function App() {
   return (
-    <View style={styles.container}>
+    // <SignInContextProvider >
         <View style={styles.container}>
         <StatusBar
           barStyle="light-content"
@@ -19,7 +20,7 @@ export default function App() {
         {/* <Text>hello</Text> */}
         <RootNavigator />
       </View>
-    </View>
+    // </SignInContextProvider>
   );
 }
 

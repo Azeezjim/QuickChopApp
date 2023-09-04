@@ -12,30 +12,30 @@ import * as Animatable from 'react-native-animatable';
 import {Icon, Button, SocialIcon} from 'react-native-elements';
 import {Formik} from 'formik';
 import Header from '../../components/Header';
-// import d from '@react-native-firebase/auth'
+import auth from '@react-native-firebase/auth'
 import {SignInContext} from '../../contexts/authContext';
 
 export default function SignInScreen({navigation}) {
-  const {dispatchSignedIn} = useContext(SignInContext);
+  // const {dispatchSignedIn} = useContext(SignInContext);
 
   const [textInput2Fossued, setTextInput2Fossued] = useState(false);
   const textInpput1 = useRef(1);
   const textInput2 = useRef(2);
 
-//   async function signIn(data) {
-//     try {
-//       const {password, email} = data;
-//       const user = await auth().signInWithEmailAndPassword(email, password);
-//       if (user) {
-//         dispatchSignedIn({
-//           type: 'UPDATE_SIGN_IN',
-//           payload: {userToken: 'signed-in'},
-//         });
-//       }
-//     } catch (error) {
-//       Alert.alert(error.name, error.message);
-//     }
-//   }
+  // async function signIn(data) {
+  //   try {
+  //     const {password, email} = data;
+  //     const user = await auth().signInWithEmailAndPassword(email, password);
+  //     if (user) {
+  //       dispatchSignedIn({
+  //         type: 'UPDATE_SIGN_IN',
+  //         payload: {userToken: 'signed-in'},
+  //       });
+  //     }
+  //   } catch (error) {
+  //     Alert.alert(error.name, error.message);
+  //   }
+  // }
 
   return (
     <View style={styles.container}>
@@ -53,7 +53,7 @@ export default function SignInScreen({navigation}) {
       <Formik
         initialValues={{email: '', password: ''}}
         onSubmit={values => {
-        //   signIn(values);
+          signIn(values);
         }}>
         {props => (
           <View>
@@ -112,7 +112,7 @@ export default function SignInScreen({navigation}) {
                 title="SIGN IN"
                 buttonStyle={parameters.styledButton}
                 titleStyle={parameters.buttonTitle}
-                // onPress={props.handleSubmit}
+                onPress={props.handleSubmit}
               />
             </View>
           </View>

@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 import {colors, parameters, title} from '../../global/styles';
 import {SignInContext} from '../../contexts/authContext';
-// import auth from '@react-native-firebase/auth';
+import auth from '@react-native-firebase/auth';
 
 import Swiper from 'react-native-swiper';
 
@@ -31,7 +31,7 @@ export default function SignInWelcomeScreen({navigation}) {
   //   });
   // }, []);
 
-  return (
+    return (
     <ScrollView
       contentContainerStyle={{flexGrow: 1, justifyContent: 'space-between'}}>
       <View
