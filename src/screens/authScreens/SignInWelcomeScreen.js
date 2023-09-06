@@ -1,4 +1,4 @@
-import React, {useState, useRef, useEffect, useContext} from 'react';
+import React, { useState, useRef, useEffect, useContext } from 'react';
 import {
   View,
   Text,
@@ -7,15 +7,15 @@ import {
   Image,
   ScrollView,
 } from 'react-native';
-import {colors, parameters, title} from '../../global/styles';
-import {SignInContext} from '../../contexts/authContext';
-// import auth from '@react-native-firebase/auth';
+import { colors, parameters, title } from '../../global/styles';
+import { SignInContext } from '../../contexts/authContext';
+import auth from '@react-native-firebase/auth';
 
 import Swiper from 'react-native-swiper';
 
-import {Icon, Button, SocialIcon} from 'react-native-elements';
+import { Icon, Button, SocialIcon } from 'react-native-elements';
 
-export default function SignInWelcomeScreen({navigation}) {
+export default function SignInWelcomeScreen({ navigation }) {
   // const {dispatchSignedIn} = useContext(SignInContext);
 
   // useEffect(() => {
@@ -33,29 +33,29 @@ export default function SignInWelcomeScreen({navigation}) {
 
   return (
     <ScrollView
-      contentContainerStyle={{flexGrow: 1, justifyContent: 'space-between'}}>
+      contentContainerStyle={{ flexGrow: 1, justifyContent: 'space-between' }}>
       <View
         style={{
           justifyContent: 'flex-start',
           alignItems: 'center',
           paddingTop: 20,
         }}>
-        <Text style={{fontSize: 26, color: colors.buttons, fontWeight: 'bold'}}>
+        <Text style={{ fontSize: 26, color: colors.buttons, fontWeight: 'bold' }}>
           DISCOVER RESTAURANTS
         </Text>
-        <Text style={{fontSize: 26, color: colors.buttons, fontWeight: 'bold'}}>
+        <Text style={{ fontSize: 26, color: colors.buttons, fontWeight: 'bold' }}>
           IN YOUR AREA
         </Text>
       </View>
 
       <View style={{}}>
-        <Swiper autoplay={true} style={{height: 250}}>
+        <Swiper autoplay={true} style={{ height: 250 }}>
           <View style={styles.slide1}>
             <Image
               source={{
                 uri: 'https://bukasapics.s3.us-east-2.amazonaws.com/plate4.png',
               }}
-              style={{height: '100%', width: '100%'}}
+              style={{ height: '100%', width: '100%' }}
             />
           </View>
 
@@ -64,7 +64,7 @@ export default function SignInWelcomeScreen({navigation}) {
               source={{
                 uri: 'https://bukasapics.s3.us-east-2.amazonaws.com/plate3.png',
               }}
-              style={{height: '100%', width: '100%'}}
+              style={{ height: '100%', width: '100%' }}
             />
           </View>
 
@@ -73,7 +73,7 @@ export default function SignInWelcomeScreen({navigation}) {
               source={{
                 uri: 'https://bukasapics.s3.us-east-2.amazonaws.com/plate5.png',
               }}
-              style={{height: '100%', width: '100%'}}
+              style={{ height: '100%', width: '100%' }}
             />
           </View>
 
@@ -82,14 +82,14 @@ export default function SignInWelcomeScreen({navigation}) {
               source={{
                 uri: 'https://bukasapics.s3.us-east-2.amazonaws.com/plate1.png',
               }}
-              style={{height: '100%', width: '100%'}}
+              style={{ height: '100%', width: '100%' }}
             />
           </View>
         </Swiper>
       </View>
 
-      <View style={{marginBottom: 20}}>
-        <View style={{marginHorizontal: 20, marginTop: 30}}>
+      <View style={{ marginBottom: 20 }}>
+        <View style={{ marginHorizontal: 20, marginTop: 30 }}>
           <Button
             title="SIGN IN"
             buttonStyle={parameters.styledButton}
@@ -100,7 +100,7 @@ export default function SignInWelcomeScreen({navigation}) {
           />
         </View>
 
-        <View style={{marginHorizontal: 20, marginTop: 30}}>
+        <View style={{ marginHorizontal: 20, marginTop: 30 }}>
           <Button
             title="Create an account"
             buttonStyle={styles.createButton}

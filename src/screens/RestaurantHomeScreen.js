@@ -13,7 +13,7 @@ const SCREEN_WIDTH = Dimensions.get('window').width
 const initialLayout = SCREEN_WIDTH;
 
 const RestaurantHomeScreen = ({navigation,route}) => {
-
+    
     const id = route?.params?.id;
 
     const[routes] = useState([

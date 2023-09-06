@@ -2,6 +2,9 @@ import React from 'react'
 import {createStackNavigator, TransitionPresets} from '@react-navigation/stack'
 import SignInWelcomeScreen from '../screens/authScreens/SignInWelcomeScreen';
 import SignInScreen from '../screens/authScreens/SignInScreen'
+import RestaurantMapScreen from '../screens/RestaurantsMapScreen';
+import DrawerNavigator from './DrawerNavigator';
+
 
 import SignUpScreen from '../screens/authScreens/SignUpScreen';
 
@@ -38,7 +41,23 @@ export function AuthStack(){
                             ...TransitionPresets.RevealFromBottomAndroid
                         }}
                     /> 
+                    <Auth.Screen
+                name="DrawerNavigator"
+                component={DrawerNavigator}
+                options={{
+                    headerShown: false,
+                    ...TransitionPresets.RevealFromBottomAndroid
+                }}
+            />
 
+            <Auth.Screen
+                name="RestaurantMapScreen"
+                component={RestaurantMapScreen}
+                options={{
+                    headerShown: false,
+                    ...TransitionPresets.RevealFromBottomAndroid
+                }}
+            />
         </Auth.Navigator>
     )
 }

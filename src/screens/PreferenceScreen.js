@@ -69,7 +69,7 @@ export default class PreferenceScreen extends Component {
                                 />
                                 <Text style ={styles.text5}>- - - - -</Text>
                             </View>
-                            <Text style ={styles.text6}>R{price.toFixed(2)}</Text>
+                            <Text style ={styles.text6}>N{price.toFixed(2)}</Text>
                         </View>
                      </View>
                      <View>
@@ -98,7 +98,7 @@ export default class PreferenceScreen extends Component {
                                               />
                                               <Text style ={{color:colors.grey2,marginLeft:-10}}>{items.name}</Text>
                                           </View>
-                                          <Text style ={styles.text6}>R{items.price.toFixed(2)}</Text>
+                                          <Text style ={styles.text6}>₦{items.price.toFixed(2)}</Text>
                                       </View>
                                   </View>
                      )}

@@ -12,9 +12,9 @@ export default function RootNavigator() {
     return (
         <NavigationContainer>
             {/* {signedIn.userToken === null ? <AuthStack /> :  */}
-            {/* <AppStack />  */}
+            <AppStack /> 
             {/*  } */}
-            <AuthStack />
+            {/* <AuthStack /> */}
         </NavigationContainer>
     )
 }
